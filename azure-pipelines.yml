@@ -20,6 +20,13 @@ steps:
     packageType: 'sdk'
     version: '5.0.300'
 
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'select'
+    vstsFeed: 'c76af8ca-9678-4a8b-ab3b-32a6a33b09af'
+
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
