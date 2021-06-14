@@ -14,11 +14,11 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+
 - task: UseDotNet@2
   inputs:
     packageType: 'sdk'
-    version: 5.0.7
-    vsVersion: '2019'
+    version: '5.0.300'
 
 - task: DotNetCoreCLI@2
   inputs:
